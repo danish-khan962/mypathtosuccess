@@ -3,6 +3,7 @@ import { Poppins } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/theme/theme-provider";
 import ThemeToggler from "@/theme/theme-toggler";
+import { Toaster } from "@/components/ui/toast"
 
 
 const poppins = Poppins({
@@ -30,6 +31,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
           disableTransitionOnChange
         >
           {children}
+          <Toaster />
           <div className="fixed bottom-4 right-4 z-9">
             <ThemeToggler />
           </div>
